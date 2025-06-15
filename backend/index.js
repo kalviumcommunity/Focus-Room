@@ -26,7 +26,7 @@ app.get('/modes', (req, res) => {
   });
 });
 
-// POST endpoint for session data
+// POST endpoint to simulate creating a session
 app.post('/sessions', (req, res) => {
   const { mode, duration } = req.body;
 
@@ -34,10 +34,26 @@ app.post('/sessions', (req, res) => {
     return res.status(400).json({ message: 'Missing mode or duration' });
   }
 
-  // Simulate saving to database
+  // Simulate saving session
   res.status(201).json({
     message: 'Session created successfully',
     session: { mode, duration }
+  });
+});
+
+// PUT endpoint to simulate updating a session by ID
+app.put('/sessions/:id', (req, res) => {
+  const { id } = req.params;
+  const { mode, duration } = req.body;
+
+  if (!mode || !duration) {
+    return res.status(400).json({ message: 'Missing mode or duration' });
+  }
+
+  // Simulate updating session
+  res.status(200).json({
+    message: `Session with ID ${id} updated successfully`,
+    updatedSession: { id, mode, duration }
   });
 });
 
