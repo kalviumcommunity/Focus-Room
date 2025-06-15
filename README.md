@@ -72,7 +72,7 @@ Submit PR 2: Proof of task management system
 
 Phase 2: Design (Day 4–6)
 Day 4
-Create a low-fidelity wireframe using Figma or Balsamiq
+Create a low-fidelity wireframe using Figma
 
 
 Submit PR 3: Low-fidelity design and video explanation
